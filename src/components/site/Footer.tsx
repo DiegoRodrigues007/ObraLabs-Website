@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Linkedin, Twitter, Instagram, Mail, MapPin } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
               <Logo />
             </div>
             <p className="mt-4 max-w-sm text-sm text-white/60">
-              ObraLabs builds software solutions that bring clarity, control and momentum to every construction project.
+              A ObraLabs desenvolve ferramentas digitais para levar mais clareza, controle e rastreabilidade à gestão de obras.
             </p>
             <div className="mt-6 flex items-center gap-3">
               {[Twitter, Linkedin, Instagram, Github].map((Icon, i) => (
@@ -23,32 +23,30 @@ export function Footer() {
             </div>
           </div>
 
-          <FooterCol title="Product" links={[
-            { to: "/features", label: "Features" },
-            { to: "/solutions", label: "Solutions" },
-            { to: "/pricing", label: "Pricing" },
+          <FooterCol title="Produtos" links={[
+            { to: "/products", label: "Myobra" },
           ]} />
-          <FooterCol title="Company" links={[
-            { to: "/about", label: "About" },
-            { to: "/contact", label: "Contact" },
-            { to: "/", label: "Customers" },
+          <FooterCol title="Empresa" links={[
+            { to: "/", label: "Início" },
+            { to: "/about", label: "Sobre" },
+            { to: "/contact", label: "Contato" },
           ]} />
 
           <div>
-            <h4 className="font-display text-sm font-semibold text-white">Contact</h4>
+            <h4 className="font-display text-sm font-semibold text-white">Contato</h4>
             <ul className="mt-4 space-y-3 text-sm text-white/60">
               <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-primary" /> hello@obralabs.com</li>
-              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary" /> São Paulo, BR · Remote</li>
+              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary" /> São Paulo, BR · Remoto</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} ObraLabs. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ObraLabs. Todos os direitos reservados.</p>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
-            <a href="#" className="hover:text-white">Security</a>
+            <a href="#" className="hover:text-white">Privacidade</a>
+            <a href="#" className="hover:text-white">Termos</a>
+            <a href="#" className="hover:text-white">Segurança</a>
           </div>
         </div>
       </div>

@@ -4,19 +4,17 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 const NAV = [
-  { to: "/", label: "Home" },
-  { to: "/solutions", label: "Solutions" },
-  { to: "/features", label: "Features" },
-  { to: "/about", label: "About" },
-  { to: "/pricing", label: "Pricing" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Início" },
+  { to: "/products", label: "Produtos" },
+  { to: "/about", label: "Sobre" },
+  { to: "/contact", label: "Contato" },
 ] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="container-page flex h-16 items-center justify-between">
+      <div className="container-page flex h-20 items-center justify-between">
         <Link to="/" className="shrink-0"><Logo /></Link>
         <nav className="hidden items-center gap-1 md:flex">
           {NAV.map((n) => (
@@ -33,13 +31,13 @@ export function Header() {
         </nav>
         <div className="hidden items-center gap-2 md:flex">
           <Link to="/contact" className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground">
-            Sign in
+            Fale conosco
           </Link>
           <Link
             to="/contact"
             className="inline-flex items-center gap-1.5 rounded-full bg-[var(--ink)] px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:shadow-elevated"
           >
-            Request a Demo
+            Conhecer soluções
           </Link>
         </div>
         <button
@@ -68,7 +66,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground"
             >
-              Request a Demo
+              Conhecer soluções
             </Link>
           </div>
         </div>
