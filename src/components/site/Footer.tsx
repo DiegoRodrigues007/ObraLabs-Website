@@ -56,9 +56,9 @@ export function Footer() {
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} ObraLabs. Todos os direitos reservados.</p>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white">
+            <Link to="/myobra/privacy-policy" className="hover:text-white">
               Privacidade
-            </a>
+            </Link>
             <a href="#" className="hover:text-white">
               Termos
             </a>

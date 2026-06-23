@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>/solutions</loc><changefreq>weekly</changefreq></url>
-  <url><loc>/features</loc><changefreq>weekly</changefreq></url>
-  <url><loc>/products</loc><changefreq>weekly</changefreq></url>
-  <url><loc>/about</loc><changefreq>weekly</changefreq></url>
-  <url><loc>/pricing</loc><changefreq>weekly</changefreq></url>
-  <url><loc>/contact</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://obralabs.com.br/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://obralabs.com.br/solutions</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://obralabs.com.br/features</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://obralabs.com.br/products</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://obralabs.com.br/about</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://obralabs.com.br/pricing</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://obralabs.com.br/contact</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://obralabs.com.br/myobra/privacy-policy</loc><changefreq>monthly</changefreq></url>
 </urlset>

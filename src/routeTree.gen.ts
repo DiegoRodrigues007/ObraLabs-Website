@@ -16,6 +16,7 @@ import { Route as FeaturesRouteImport } from './routes/features'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MyobraPrivacyPolicyRouteImport } from './routes/myobra.privacy-policy'
 
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
@@ -52,6 +53,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MyobraPrivacyPolicyRoute = MyobraPrivacyPolicyRouteImport.update({
+  id: '/myobra/privacy-policy',
+  path: '/myobra/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/products': typeof ProductsRoute
   '/solutions': typeof SolutionsRoute
+  '/myobra/privacy-policy': typeof MyobraPrivacyPolicyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/products': typeof ProductsRoute
   '/solutions': typeof SolutionsRoute
+  '/myobra/privacy-policy': typeof MyobraPrivacyPolicyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/products': typeof ProductsRoute
   '/solutions': typeof SolutionsRoute
+  '/myobra/privacy-policy': typeof MyobraPrivacyPolicyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/products'
     | '/solutions'
+    | '/myobra/privacy-policy'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/products'
     | '/solutions'
+    | '/myobra/privacy-policy'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/products'
     | '/solutions'
+    | '/myobra/privacy-policy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +131,7 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   ProductsRoute: typeof ProductsRoute
   SolutionsRoute: typeof SolutionsRoute
+  MyobraPrivacyPolicyRoute: typeof MyobraPrivacyPolicyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -172,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/myobra/privacy-policy': {
+      id: '/myobra/privacy-policy'
+      path: '/myobra/privacy-policy'
+      fullPath: '/myobra/privacy-policy'
+      preLoaderRoute: typeof MyobraPrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -183,6 +203,7 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   ProductsRoute: ProductsRoute,
   SolutionsRoute: SolutionsRoute,
+  MyobraPrivacyPolicyRoute: MyobraPrivacyPolicyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
